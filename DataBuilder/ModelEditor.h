@@ -22,10 +22,10 @@
 */
 
 #import <Foundation/NSObject.h>
-
 #import <CoreData/NSManagedObjectModel.h>
+#import <AppKit/NSNibDeclarations.h>
+#import <AppKit/NSView.h>
 
-@class NSView, NSWindow;
 @class Document;
 
 /**
@@ -50,14 +50,14 @@
    * 'view' outlet - this will be the view of the editor put into the
    * main document window.
    */
-  NSView * view;
+  IBOutlet NSView * view;
   /**
    * This outlet should be keyed to the window in which the view has been
    * modelled. The ModelEditor class automatically takes the main view
    * of the editor out of the window and disposes of the window at nib
    * unarchiving time.
    */
-  NSWindow * bogusWindow;
+  IBOutlet NSWindow * bogusWindow;
 }
 
 /**

@@ -45,18 +45,14 @@
 - initWithModel: (NSManagedObjectModel *) aModel
        document: (Document *) aDocument
 {
-  if ([super init])
+  if ((self=[super init]))
     {
       ASSIGN(model, aModel);
 
       document = aDocument;
 
-      return self;
     }
-  else
-    {
-      return nil;
-    }
+  return self;
 }
 
 - (void) awakeFromNib
