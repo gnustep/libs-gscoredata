@@ -85,8 +85,7 @@
         }
       else
         {
-          [coder decodeValueOfObjCType: @encode(NSAttributeType)
-                                    at: &_attributeType];
+          [coder decodeValueOfObjCType: @encode(int) at: &_attributeType];
   //        ASSIGN(_attributeValueClassName, [coder decodeObject]);
           ASSIGN(_defaultValue, [coder decodeObject]);
         }
@@ -108,8 +107,7 @@
     }
   else
     {
-      [coder encodeValueOfObjCType: @encode(NSAttributeType)
-                                at: &_attributeType];
+      [coder encodeValueOfObjCType: @encode(int) at: &_attributeType];
   //    [coder encodeObject: _attributeValueClassName];
       [coder encodeObject: _defaultValue];
     }
