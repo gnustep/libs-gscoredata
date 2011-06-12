@@ -1,3 +1,9 @@
+2011-06-12 09:42-EDT Gregory John Casamento <greg.casamento@gmail.com>
+
+	* CoreDataHeaders.h: Conditionally use the defines for _, ASSIGN, and
+	RETAIN when the framework is not being compiled using GNUstep and
+	GNUSTEP is not defined.
+
 2010-12-27  Nicola Pero <nicola.pero@meta-innovation.com>
 
 	* NSAttributeDescription.m ([-initWithCoder:],

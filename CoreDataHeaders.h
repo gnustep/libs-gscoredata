@@ -22,6 +22,7 @@
 	Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02111 USA.
 */
 
+#ifndef GNUSTEP /* if and only if we are not compiling under GNUstep, should these be defined */
 #ifndef ASSIGN
 #define ASSIGN(VAR, VAL) [(VAR) autorelease], (VAR)=[(VAL) retain]
 #endif
@@ -33,6 +34,7 @@
 #endif
 #ifndef _
 #define _(STR) STR
+#endif
 #endif
 
 #import <CoreData/CoreData.h>
