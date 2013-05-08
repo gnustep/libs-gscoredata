@@ -1,3 +1,5 @@
+#import <CoreData/CoreData.h>
+
 #ifndef ASSIGN
 #define ASSIGN(VAR, VAL) [(VAR) autorelease], (VAR)=[(VAL) retain]
 #endif
@@ -18,11 +20,10 @@
 #define sel_eq(A, B) ((A) == (B))
 #endif
 #endif
+
 #ifndef NSDebugLog
 #define NSDebugLog(FMT, ARGS...) 
 #endif
-
-#import <CoreData/CoreData.h>
 
 @interface NSManagedObjectModel (Private)
 - (NSDictionary *) entitiesByNameForConfiguration: (NSString *) configuration;

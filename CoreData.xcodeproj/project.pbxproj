@@ -87,6 +87,7 @@
 		EE12FAC40D059075000E4BA5 /* COPYING.fdl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING.fdl; sourceTree = "<group>"; };
 		EE12FAC50D059087000E4BA5 /* Documentation */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Documentation; sourceTree = "<group>"; };
 		EE12FAE20D0590FD000E4BA5 /* gscoredata-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gscoredata-logo.png"; path = "Images/gscoredata-logo.png"; sourceTree = "<group>"; };
+		EE6226AD1739503E005CEDC1 /* CoreData.qcodeproj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = CoreData.qcodeproj; sourceTree = "<group>"; };
 		EEFA7B7F0D185F5C0061DC52 /* CoreDataHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataHeaders.h; sourceTree = "<group>"; };
 		EEFA7F200D1904910061DC52 /* GSSQLitePersistentStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSSQLitePersistentStore.h; sourceTree = "<group>"; };
 		EEFA7F210D1904910061DC52 /* GSSQLitePersistentStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSSQLitePersistentStore.m; sourceTree = "<group>"; };
@@ -118,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				EE120BC90D05911D000E4BA5 /* mySTEP.make */,
+				EE6226AD1739503E005CEDC1 /* CoreData.qcodeproj */,
 				EEFA80840D1906EA0061DC52 /* GNUmakefile */,
 				EEFA80850D1906EA0061DC52 /* GNUmakefile.preamble */,
 				EE12FAC00D05905C000E4BA5 /* ChangeLog */,
@@ -281,10 +283,19 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "CoreData" */;
+			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* CoreData */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
+			projectRoot = "";
 			targets = (
 				8DC2EF4F0486A6940098B216 /* CoreData */,
 			);
@@ -315,7 +326,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export SOURCES=*.m   # all source codes\nexport LIBS=\"-lsqlite3\"  \t\t\t# add any additional libraries like -ltiff etc.\nexport FRAMEWORKS=\t\t\t\t\t# add any additional Frameworks etc.\nexport INSTALL=true                  # will try to install on the Zaurus (using ssh)\nexport INSTALL_PATH=/System/Library/Frameworks   # override INSTALL_PATH for MacOS X machine Zaurus\nexport RUN=false                    # will try to run with X11 and mySTEP\nexport ROOT=$HOME/Documents/Projects/QuantumSTEP\t# project root\n/usr/bin/make -f $ROOT/System/Sources/Frameworks/mySTEP.make $ACTION\n";
+			shellScript = "export QuantumSTEP=$HOME/Documents/Projects/QuantumSTEP\t# project root\n./CoreData.qcodeproj\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -372,6 +383,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CoreData_Prefix.pch;
+				GCC_VERSION = 4.0;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Frameworks";
 				PRODUCT_NAME = CoreData;
@@ -394,6 +406,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CoreData_Prefix.pch;
+				GCC_VERSION = 4.0;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Frameworks";
 				PRODUCT_NAME = CoreData;

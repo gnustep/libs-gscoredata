@@ -1,3 +1,8 @@
+2013-02-16	Nikolaus Schaller <hns@computer.org>
+
+        * added .qcodeproj for compilation on mySTEP
+	* NIB files of DataBuilder updated
+
 2011-06-12 09:42-EDT Gregory John Casamento <greg.casamento@gmail.com>
 
 	* CoreDataHeaders.h: Conditionally use the defines for _, ASSIGN, and
