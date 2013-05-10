@@ -111,6 +111,7 @@
 		EE40F3E40D26A83B0083978F /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/RelationshipEditor.nib; sourceTree = "<group>"; };
 		EE465DB30D19B21900E99DA0 /* DataBuilder.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = DataBuilder.icns; path = Images/DataBuilder.icns; sourceTree = "<group>"; };
 		EE465DB40D19B21900E99DA0 /* gsdatamodel.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = gsdatamodel.icns; path = Images/gsdatamodel.icns; sourceTree = "<group>"; };
+		EE62BB0A173C36DF005CEDC1 /* DataBuilder.qcodeproj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = DataBuilder.qcodeproj; sourceTree = "<group>"; };
 		EEA875340D07D9E3002C296E /* mySTEP.make */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = mySTEP.make; path = ../../mySTEP.make; sourceTree = SOURCE_ROOT; };
 		EEFA7D4B0D1874C10061DC52 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/DocumentWindow.nib; sourceTree = "<group>"; };
 		EEFA7D4D0D1874C10061DC52 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/DataBuilder.nib; sourceTree = "<group>"; };
@@ -158,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				EEA875340D07D9E3002C296E /* mySTEP.make */,
+				EE62BB0A173C36DF005CEDC1 /* DataBuilder.qcodeproj */,
 				EE120C0F0D05939E000E4BA5 /* BUGS */,
 				EE120C100D05939E000E4BA5 /* ChangeLog */,
 				EE120C110D05939E000E4BA5 /* COPYING */,
@@ -355,7 +357,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export SOURCES=*.m   # all source codes\nexport LIBS=\t\t  \t\t\t# add any additional libraries like -ltiff etc.\nexport FRAMEWORKS=CoreData\t\t\t# add any additional Frameworks etc.\nexport INSTALL=true                  # will try to install on the Zaurus (using ssh)\nexport INSTALL_PATH=/Developer/Applications   # override INSTALL_PATH for MacOS X machine Zaurus\nexport RUN=false                    # will try to run with X11 and mySTEP\nexport DEPENDS=\"quantumstep-coredata-framework\"\nexport ROOT=$HOME/Documents/Projects/QuantumSTEP\t# project root\n/usr/bin/make -f $ROOT/System/Sources/Frameworks/mySTEP.make $ACTION\n";
+			shellScript = "export QuantumSTEP=$HOME/Documents/Projects/QuantumSTEP\t# project root\n./DataBuilder.qcodeproj\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

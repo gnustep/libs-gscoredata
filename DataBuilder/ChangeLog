@@ -1,3 +1,7 @@
+2013-05-09      Nikolaus Schaller <hns@computer.org>
+
+        * fixed compilation on mySTEP
+
 2007-12-29      Nikolaus Schaller <hns@computer.org>
 
         * added missing .nib files for Editors
